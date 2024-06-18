@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логические операторы</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Что выведет alert (ИЛИ)?
+
+        // alert( null || 2 || undefined ); 1
+
+        // Что выведет alert (ИЛИ)?
+
+        // alert( alert(1) || 2 || alert(3) ); // 1,2
+
+        // Что выведет alert (И)?
+
+        // alert( 1 && null && 2 ); // false
+
+        // Что выведет этот код?
+
+        // alert( null || 2 && 3 || 4 ); true
+
+        // Что выведет этот код (||=, &&=)?
+
+        // let value = NaN;
+
+        // value &&= 10; //
+        // value ||= 20; //
+        // value &&= 30; //
+        // value ||= 40; //
+
+        // alert(value); // 30
+
+        // Проверка значения из диапазона
+
+        // let age = +prompt("Enter your age");
+
+        // if(age >= 14 && age <= 90)
+
+        // Проверка значения вне диапазона
+
+        // if(age < 14 || age > 90)
+
+        // Вопрос об "if"
+
+        // if (-1 || 0) alert('first');  // yes (- * - = +)
+        // if (-1 && 0) alert('second'); // not
+        // if (null || -1 && 1) alert('third'); // yes
+
+        // Проверка логина
+
+        let login = prompt("Name");
+        let password = login == "Admin" ? prompt("password") : "";
+
+
+        if(login == "Admin" && password == "Я главный"){
+            alert("Здравствуйте!")
+        }else if(login == "Admin" && password != "Я главный"){
+            alert("Неверный пароль")
+        }else{
+            alert("Отменено")
+        }
+
+    </script>
+
+</body>
+
+</html>

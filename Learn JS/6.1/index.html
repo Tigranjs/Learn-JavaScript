@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекурсия и стек</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Вычислить сумму чисел до данного
+
+        // let sum = 0;
+        // function sumTo(n){
+        //     if(n <= 0)return n;
+        //     return  n + sumTo(n - 1)
+        // }
+
+        // console.log(sumTo(100));
+
+        // Вычислить факториал
+
+        // function factorial(n){
+        //     if(n <= 1)return n;
+        //     return n * factorial(n - 1);
+        // }
+
+        // console.log(factorial(8));
+
+        // Вывод односвязного списка
+
+        let list = {
+            value: 1,
+            next: {
+                value: 2,
+                next: {
+                    value: 3,
+                    next: {
+                        value: 4,
+                        next: null
+                    }
+                }
+            }
+        };
+
+        // function printList(list){
+        //     if(list.next === null)return list;
+        //     return printList(list.next)
+        // }
+
+        // console.log(printList(list));
+
+        // function printList(list){
+            
+        //     while(true){
+        //         console.log(list.value);  
+        //         if(list.next == null){
+        //             break
+        //         }else{
+        //             list = list.next;
+        //         }
+        //     }
+        // }
+        
+        // printList(list)
+
+    </script>
+</body>
+
+</html>

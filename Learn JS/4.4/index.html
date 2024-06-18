@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы объекта, "this"</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Создайте калькулятор
+
+        let calculator = {
+            a: null,
+            b: null,
+            read(n1, n2) {
+                this.a = n1;
+                this.b = n2;
+            },
+            sum() {
+                return (typeof (this.a + this.b) == "number" ? (this.a + this.b) : "Error")
+            },
+            mul() {
+                return (typeof (this.a * this.b) == "number" ? (this.a * this.b) : "Error")
+            }
+        };
+
+        calculator.read(12, 12)
+        // alert(calculator.sum())
+        // alert(calculator.mul())
+
+        // Цепь вызовов 
+
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+
+            },
+            showStep: function () { // показывает текущую ступеньку
+                alert(this.step);
+                return this
+            }
+        };
+
+        ladder.up().up().up().showStep().down().showStep()
+    </script>
+</body>
+
+</html>

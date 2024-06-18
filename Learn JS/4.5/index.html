@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор, оператор "new"</title>
+    
+</head>
+
+<body>
+
+    <script>
+        // Создайте калькулятор при помощи конструктора, new Calculator
+
+        function Calculator() {
+
+            this.read = function () {
+                this.a = +prompt('a?', 0);
+                this.b = +prompt('b?', 0);
+            };
+
+            this.sum = function () {
+                return this.a + this.b;
+            };
+
+            this.mul = function () {
+                return this.a * this.b;
+            };
+        }
+
+        const calculator = new Calculator()
+
+        // Создайте new Accumulator
+
+        function Accumulator(x) {
+            this.value = x;
+            this.read = function () {
+                this.value += +prompt('Сколько нужно добавить?', 0);
+            }
+        }
+
+        let accumulator = new Accumulator(1);
+
+        accumulator.read();
+        accumulator.read();
+
+        alert(accumulator.value);
+
+    </script>
+
+</body>
+
+</html>
